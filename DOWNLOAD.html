@@ -746,23 +746,22 @@ nav {
 <script>
   // JavaScript for Search Functionality
   function handleSearch() {
-    var input, filter, blocks, block, title, i, txtValue;
+    var input, filter, gameBlocks, gameBlock, title, i, txtValue;
     input = document.getElementById("search-bar");
     filter = input.value.toUpperCase();
-    blocks = document.getElementsByClassName("block1");
+    gameBlocks = document.querySelectorAll(".game-container .block1");
 
-    for (i = 0; i < blocks.length; i++) {
-      block = blocks[i];
-      title = block.querySelector(".content strong"); // Adjust based on your actual HTML structure
+    gameBlocks.forEach(function(gameBlock) {
+      title = gameBlock.querySelector(".content strong"); // Adjust based on your actual HTML structure
       if (title) {
         txtValue = title.textContent || title.innerText;
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
-          block.style.display = "";
+          gameBlock.style.display = "";
         } else {
-          block.style.display = "none";
+          gameBlock.style.display = "none";
         }
       }
-    }
+    });
   }
 </script>
 </body>
