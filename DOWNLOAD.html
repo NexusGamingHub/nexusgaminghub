@@ -744,10 +744,25 @@ nav {
 
 </div>
 <script>
-  function gotoLink(){
+  // JavaScript for Search Functionality
+  function handleSearch() {
+    var input, filter, blocks, block, title, i, txtValue;
+    input = document.getElementById("search-bar");
+    filter = input.value.toUpperCase();
+    blocks = document.getElementsByClassName("block1");
 
-    
-    window.open("https://firebasestorage.googleapis.com/v0/b/grand-theft-auto-v-repac-4f4dc.appspot.com/o/Oceanofgames.com_Grand_Theft_Auto_V_Repack.zip?alt=media&token=cd2bc517-b08e-4e23-8baa-2c9930711652")
+    for (i = 0; i < blocks.length; i++) {
+      block = blocks[i];
+      title = block.querySelector(".content strong"); // Adjust based on your actual HTML structure
+      if (title) {
+        txtValue = title.textContent || title.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          block.style.display = "";
+        } else {
+          block.style.display = "none";
+        }
+      }
+    }
   }
 </script>
 </body>
