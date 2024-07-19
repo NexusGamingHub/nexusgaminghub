@@ -4,6 +4,99 @@
 <meta name="google-adsense-account" content="ca-pub-8519859825719594">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+
+  /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Adjust as needed */
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1200px;
+}
+
+.header, .content {
+    box-sizing: border-box;
+}
+
+.header {
+    width: 100%;
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #444;
+    padding: 10px 0;
+}
+
+.navbar a {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #555;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: #111; /* Adjust as needed */
+    color: white;
+}
+
+.content .box {
+    flex: 1 1 300px; /* Adjust the basis as needed */
+    margin: 10px;
+    padding: 20px;
+    background-color: #222;
+    border: 1px solid #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar a {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .content .box {
+        margin: 5px 0;
+        padding: 10px;
+    }
+}
+
 * {box-sizing: border-box;}
 
 body {
